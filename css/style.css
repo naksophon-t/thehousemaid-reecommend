@@ -1,0 +1,57 @@
+h1 {
+    font-family: "Taviraj", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+h2 {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+p {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.openf {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.fontbf {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+}
+
+h4 {
+    font-family: "Noto Sans Thai Looped", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.textb {
+    color: #0b5ed7;
+}
+
+.textw{
+    color: white;
+}
