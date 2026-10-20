@@ -4,8 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="แนะนำ The Housemaid (เฮาส์เมด) นิยายระทึกขวัญโดย Freida McFadden สำรวจเรื่องย่อ ความลับของครอบครัววินเชสเตอร์ เหมาะกับใคร และสิ่งที่ผู้อ่านจะได้จากหนังสือเล่มนี้">
+    <meta name="keywords"
+        content="The Housemaid, เฮาส์เมด, Freida McFadden, เรื่องย่อ The Housemaid, รีวิวหนังสือ The Housemaid, นิยายระทึกขวัญ, นิยายลึกลับ, แนะนำหนังสือ">
+    <meta name="theme-color" content="#080b14">
 
-    <title>The Housemaid | เฮาส์เมด</title>
+    <title>The Housemaid (เฮาส์เมด) | เรื่องย่อและแนะนำหนังสือนิยายระทึกขวัญ</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,770 +22,607 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Layout refinements: keep the original black / blue / yellow case-file theme -->
+    <style>
+        :root {
+            color-scheme: dark;
+            --case-blue: #0d6efd;
+            --case-yellow: #ffc107;
+            --case-black: #05070c;
+            --case-panel: #0a0d14;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 76px;
+        }
+
+        body {
+            overflow-wrap: anywhere;
+        }
+
+        section {
+            scroll-margin-top: 76px;
+        }
+
+        .navbar {
+            z-index: 1030;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: .5rem;
+            left: .5rem;
+            z-index: 2000;
+            padding: .65rem 1rem;
+            transform: translateY(-160%);
+            color: #111;
+            background: var(--case-yellow);
+            border-radius: .5rem;
+        }
+
+        .skip-link:focus {
+            transform: translateY(0);
+        }
+
+        .case-container {
+            max-width: 1120px;
+        }
+
+        .hero-cover-frame {
+            max-width: 390px;
+            margin-inline: auto;
+            padding: clamp(.65rem, 2vw, 1rem);
+            background: linear-gradient(145deg, rgba(13, 110, 253, .12), rgba(255, 193, 7, .04));
+        }
+
+        .hero-cover {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 590px;
+            object-fit: contain;
+        }
+
+        .case-kicker {
+            letter-spacing: .12em;
+        }
+
+        .case-card {
+            height: 100%;
+            border: 1px solid rgba(13, 110, 253, .7);
+            background: var(--case-panel);
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--case-yellow);
+            box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .22);
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin-inline: auto;
+        }
+
+        .benefit-img {
+            width: 112px;
+            height: 112px;
+            object-fit: contain;
+        }
+
+        .faq-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.3rem;
+            height: 2.3rem;
+            flex: 0 0 2.3rem;
+            border-radius: 50%;
+            color: #111;
+            background: var(--case-yellow);
+            font-weight: 800;
+        }
+
+        .accordion-item {
+            background: var(--case-panel);
+            border: 1px solid rgba(13, 110, 253, .65);
+        }
+
+        .accordion-button {
+            color: #f8f9fa;
+            background: var(--case-panel);
+            font-weight: 700;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: var(--case-yellow);
+            background: #101624;
+            box-shadow: inset 0 -1px 0 rgba(13, 110, 253, .45);
+        }
+
+        .accordion-button:focus {
+            box-shadow: 0 0 0 .2rem rgba(13, 110, 253, .2);
+        }
+
+        .accordion-button::after {
+            filter: invert(1);
+        }
+
+        .case-quote {
+            max-width: 850px;
+            margin-inline: auto;
+        }
+
+        .text-muted-light {
+            color: #c1c7d0;
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: clamp(2.15rem, 10vw, 3.5rem);
+            }
+
+            .section-heading {
+                font-size: clamp(2rem, 8vw, 3rem);
+            }
+
+            .section-space {
+                padding-block: 3.5rem !important;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+            }
+        }
+    </style>
 </head>
 
 <body class="bg-dark text-light">
+    <a class="skip-link" href="#main-content">ข้ามไปยังเนื้อหาหลัก</a>
 
-
-    <!-- ==================================================
-         NAVBAR
-         ================================================== -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary">
-        <div class="container">
-
-            <a class="navbar-brand fw-bold fs-4 text-warning" href="#">
-                THE HOUSEMAID
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-primary sticky-top">
+        <div class="container case-container">
+            <a class="navbar-brand fw-bold fs-4 text-warning" href="#top">THE HOUSEMAID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="เปิดเมนูนำทาง">
                 <span class="navbar-toggler-icon"></span>
-
             </button>
-
             <div class="collapse navbar-collapse" id="mainNavbar">
-
-                <ul class="navbar-nav ms-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#story">
-                            เรื่องราว
-                        </a>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#story">เรื่องราว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why-read">ทำไมจึงควรอ่าน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reader-guide">คู่มือผู้อ่าน</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits">ประโยชน์</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#value">คุณค่าของหนังสือ</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <a class="btn btn-outline-warning btn-sm rounded-pill px-3 my-2 my-lg-0"
+                            href="https://www.naiin.com/product/detail/619675" target="_blank"
+                            rel="noopener noreferrer">สนใจซื้อหนังสือ</a>
                     </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why-read">
-                            ทำไมจึงควรอ่าน
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#benefits">
-                            ประโยชน์
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#value">
-                            คุณค่าของหนังสือ
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link"
-                            href="https://www.naiin.com/product/detail/619675?srsltid=AU7gw4UkqgtJsrjqNrTF3sVpq04CFDGnRuxH6i-wFI3BzgPgP6CbxtZm">
-                            สนใจซื้อหนังซื้อ
-                        </a>
-                    </li>
-
                 </ul>
-
             </div>
-
         </div>
     </nav>
 
-
-    <!-- ==================================================
-         HERO
-         ================================================== -->
-    <header class="bg-black py-5">
-
-        <div class="container py-5">
-
-            <div class="row align-items-center g-5">
-
-                <!-- =====================================
-                     LEFT : BOOK COVER
-                     ===================================== -->
-                <div class="col-lg-5 text-center" data-aos="fade-right" data-aos-duration= "3000">
-
-                    <div class="position-relative">
-
-                        <div class="border border-primary border-3 rounded-4
-                                    p-3 shadow-lg" >
-
-                            <img src="images/Booker.webp" alt="The Housemaid เฮาส์เมด"
-                                class="img-fluid rounded-3 shadow">
-
+    <main id="main-content">
+        <!-- HERO -->
+        <header id="top" class="bg-black section-space py-5">
+            <div class="container case-container py-lg-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 text-center" data-aos="fade-right" data-aos-duration="900">
+                        <div class="hero-cover-frame border border-primary border-3 rounded-4 shadow-lg">
+                            <img src="images/Booker.webp" alt="ปกหนังสือ The Housemaid (เฮาส์เมด)"
+                                class="hero-cover img-fluid rounded-3">
                         </div>
-
                         <div class="mt-4">
-
-                            <span class="badge bg-primary px-3 py-2 me-2">
-                                MYSTERY
-                            </span>
-
-                            <span class="badge bg-warning text-dark px-3 py-2">
-                                THRILLER
-                            </span>
-
+                            <span class="badge bg-primary px-3 py-2 me-2">MYSTERY</span>
+                            <span class="badge bg-warning text-dark px-3 py-2">THRILLER</span>
                         </div>
-
                     </div>
 
-                </div>
-
-
-                <!-- =====================================
-                     RIGHT : HERO TEXT
-                     ===================================== -->
-                <div class="col-lg-7" data-aos="fade-left" data-aos-duration= "3000">
-
-                    <p class="text-primary fw-bold text-uppercase mb-2">
-                        CLASSIFIED CASE FILE
-                    </p>
-
-                    <h1 class="display-3 fw-bold mb-4">
-
-                        บ้านหลังนี้มี
-                        <span class="text-warning">
-                            ความลับ
-                        </span>
-
-                        <br>
-
-                        อะไรที่คุณไม่ควรรู้?
-
-                    </h1>
-
-                    <div class="border-start border-warning border-4 ps-4 mb-4">
-
-                        <p class="fs-4 mb-2">
-                            เมื่อโอกาสเริ่มต้นชีวิตใหม่
-                            พาคุณเข้าไปอยู่ในบ้านของครอบครัว
-                            ที่ดูสมบูรณ์แบบ...
-                        </p>
-
-                        <p class="fs-5 text-secondary  text-white mb-0">
-                            แต่กลับเต็มไปด้วยความลับ
-                        </p>
-
+                    <div class="col-lg-7" data-aos="fade-left" data-aos-duration="900">
+                        <p class="text-primary fw-bold text-uppercase case-kicker mb-3">CLASSIFIED CASE FILE</p>
+                        <h1 class="display-3 hero-title fw-bold mb-4">
+                            <span class="book-title-line">
+                                The Housemaid <span class="text-warning">(เฮาส์เมด)</span>
+                            </span>
+                            <br>
+                            บ้านหลังนี้มี <span class="text-warning">ความลับ</span>
+                            <br>
+                            อะไรที่คุณไม่ควรรู้?
+                        </h1>
+                        <div class="border-start border-warning border-4 ps-3 ps-md-4">
+                            <p class="fs-4 mb-2">เมื่อโอกาสเริ่มต้นชีวิตใหม่
+                                พามิลลีก้าวเข้าสู่บ้านของครอบครัวที่ดูสมบูรณ์แบบ...</p>
+                            <p class="fs-5 text-warning mb-4">แต่เบื้องหลังความหรูหรา กลับซ่อนความลับที่คาดไม่ถึง</p>
+                            <p class="fs-5 text-muted-light">
+                                The Housemaid (เฮาส์เมด) ผลงานของ Freida McFadden เล่าเรื่องราวของมิลลี
+                                หญิงสาวที่ได้รับโอกาสทำงานเป็นแม่บ้านในคฤหาสน์สุดหรูของครอบครัววินเชสเตอร์
+                                แต่ไม่นาน เธอก็เริ่มพบความผิดปกติที่ชวนให้สงสัยว่า บ้านหลังนี้อาจไม่ได้เป็นอย่างที่เห็น
+                            </p>
+                            <a href="#story" class="btn btn-primary btn-lg rounded-pill px-4 mt-2">เปิดแฟ้มคดี</a>
+                        </div>
                     </div>
-
-                    <p class="fs-5 text-secondary ">
-                        มิลลีได้รับโอกาสทำงานเป็นแม่บ้านให้กับ
-                        ครอบครัววินเชสเตอร์ในคฤหาสน์สุดหรู
-                        แต่ไม่นานเธอก็เริ่มพบความผิดปกติ
-                    </p>
-
-                    <a href="#story" class="btn btn-primary btn-lg rounded-pill px-4 mt-3 openf">
-
-                        เปิดแฟ้มคดี
-
-                    </a>
-
                 </div>
-
             </div>
+        </header>
 
-        </div>
-
-    </header>
-
-
-    <!-- ==================================================
-         STORY
-         ================================================== -->
-    <section id="story" class="py-5 bg-dark">
-
-        <div class="container py-5">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-10">
-
-                    <div class="text-center mb-5">
-
-                        <span class="badge bg-warning text-dark px-3 py-2 mb-3">
-                            CASE FILE 01
+        <!-- CASE FILE 01: STORY -->
+        <section id="story" class="py-5 bg-dark section-space">
+            <div class="container case-container py-lg-4">
+                <div class="section-intro text-center mb-5">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3">CASE FILE 01</span>
+                    <h2 class="story-heading fw-bold">
+                        <span class="story-heading-main">
+                            เรื่องย่อ The Housemaid (เฮาส์เมด):
                         </span>
+                        <span class="story-heading-sub text-warning">
+                            ความลับเบื้องหลังคฤหาสน์สุดหรู
+                        </span>
+                    </h2>
+                    <p class="text-muted-light fs-5 mt-3 mb-0">ยิ่งเข้าใกล้ความจริง
+                        ยิ่งพบว่าบ้านหลังนี้ไม่ได้เป็นอย่างที่เห็น</p>
+                </div>
 
-                        <h2 class="display-5 fw-bold textb">
-                            เรื่องราวที่ซ่อนอยู่
+                <div class="row justify-content-center">
+                    <div class="col-xl-10">
+                        <article class="card case-card shadow-lg rounded-4">
+                            <div class="card-body p-4 p-lg-5">
+                                <p class="textb fs-4 fw-semibold mb-3 ">
+                                    The Housemaid (เฮาส์เมด) เป็นนิยายระทึกขวัญที่เล่าเรื่องของมิลลี
+                                    หญิงสาวที่ได้รับโอกาสทำงานเป็นแม่บ้านให้กับครอบครัววินเชสเตอร์ในคฤหาสน์สุดหรู
+                                </p>
+                                <p class="fs-5 text-muted-light mb-4">
+                                    หน้าที่ของเธอคือทำความสะอาดบ้าน ดูแลลูกสาว และทำอาหารให้ครอบครัว
+                                    แต่เมื่อเริ่มทำงานได้ไม่นาน มิลลีกลับพบพฤติกรรมแปลกประหลาดของเจ้านาย
+                                    ห้องใต้หลังคาที่ล็อกจากด้านนอก และคำเตือนจากคนรอบตัว
+                                    จนทำให้เธอเริ่มตั้งคำถามกับสิ่งที่เกิดขึ้น
+                                </p>
+                                <div class="border-top border-secondary my-4"></div>
+                                <p class="textb fs-5 fw-semibold mb-3">
+                                    เธอเริ่มสงสัยว่า <span
+                                        class="text-warning">ครอบครัววินเชสเตอร์กำลังปกปิดอะไรบางอย่าง</span>
+                                </p>
+                                <p class="fs-5 text-muted-light mb-0">
+                                    แต่ความลับไม่ได้มีอยู่เพียงในบ้านหลังนี้
+                                    เพราะมิลลีเองก็มีเรื่องราวในอดีตที่ยังไม่เปิดเผย
+                                    และอาจทำให้ทุกอย่างซับซ้อนกว่าที่ใครคาดคิด
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-3">
+                    <div class="col-md-4">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4">
+                                <span class="badge bg-primary mb-3">CLUE 01</span>
+                                <h3 class="h4 fw-bold text-warning">พฤติกรรมลึกลับของเจ้านาย</h3>
+                                <p class="text-muted-light mb-0">
+                                    พฤติกรรมของคนในบ้านเริ่มทำให้มิลลีสงสัยว่ามีบางอย่างไม่ปกติ</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4">
+                                <span class="badge bg-primary mb-3">CLUE 02</span>
+                                <h3 class="h4 fw-bold text-warning">ห้องใต้หลังคาที่ซ่อนความลับ</h3>
+                                <p class="text-muted-light mb-0">
+                                    ห้องที่ถูกล็อกจากด้านนอกกลายเป็นหนึ่งในสิ่งที่ทำให้เธอต้องค้นหาความจริง</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4">
+                                <span class="badge bg-primary mb-3">CLUE 03</span>
+                                <h3 class="h4 fw-bold text-warning">มิลลีกับความลับที่ไม่มีใครรู้</h3>
+                                <p class="text-muted-light mb-0">
+                                    ครอบครัววินเชสเตอร์เองก็ยังไม่รู้ว่ามิลลีมีเรื่องใดซ่อนอยู่</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CASE FILE 02: WHY READ -->
+        <section id="why-read" class="py-5 bg-black section-space">
+            <div class="container case-container py-lg-4">
+                <div class="row align-items-start g-5">
+                    <div class="col-lg-4">
+                        <span class="badge bg-warning text-dark px-3 py-2 mb-3">CASE FILE 02</span>
+                        <h2 class="display-4 section-heading fw-bold">ทำไมจึงควร <span class="text-warning">อ่าน?</span>
                         </h2>
-
-                        <p class="text-secondary text-white fs-5">
-                            ยิ่งค้นหาความจริง
-                            เรื่องราวก็ยิ่งน่าสงสัย
+                        <p class="text-muted-light fs-5 mt-3 mb-0">เมื่อภาพที่เห็นอาจไม่ใช่ความจริงทั้งหมด
+                            ทุกเบาะแสจึงมีความหมาย</p>
+                    </div>
+                    <div class="col-lg-8">
+                        <p class="fs-4">
+                            <strong class="text-warning">The Housemaid (เฮาส์เมด)</strong>
+                            เป็นนิยายระทึกขวัญที่เหมาะสำหรับคนที่ชอบเรื่องราวลึกลับ ปริศนาที่ค่อย ๆ เปิดเผย
+                            และเหตุการณ์ที่ชวนให้ตั้งคำถามว่า <span
+                                class="text-primary fw-bold">“ความจริงที่ซ่อนอยู่คืออะไร?”</span>
                         </p>
-
+                        <p class="text-muted-light fs-5">
+                            ผลงานของ Freida McFadden สร้างบรรยากาศที่ทำให้ผู้อ่านคอยสังเกตพฤติกรรมของตัวละคร
+                            เพราะภาพลักษณ์ที่เห็นภายนอกอาจไม่ได้สะท้อนความจริงทั้งหมด
+                            และแต่ละคนอาจมีบางอย่างที่เลือกจะไม่เปิดเผย
+                        </p>
+                        <div class="border-start border-warning border-4 ps-4 mt-4">
+                            <p class="fs-5 mb-0">ยิ่งอ่าน ยิ่งมีคำถาม... <span
+                                    class="text-warning fw-bold">“ใครกำลังพูดความจริง และใครกำลังปกปิดบางอย่าง?”</span>
+                            </p>
+                        </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
-
-                    <!-- Story -->
-                    <div class="card bg-black border-primary shadow-lg">
-
-                        <div class="card-body p-4 p-lg-5">
-
-                            <p class="fs-4 fw-semibold textb">
-                                มิลลีได้รับโอกาสทำงานเป็นแม่บ้านให้กับ
-                                ครอบครัววินเชสเตอร์ในคฤหาสน์สุดหรู
-                            </p>
-
-                            <p class="text-white  fs-5">
-                                เธอต้องทำความสะอาดบ้าน ดูแลลูกสาว
-                                และทำอาหารให้ครอบครัว
-                                แต่ไม่นานเธอก็เริ่มพบความผิดปกติ
-                                ทั้งเจ้านายที่มีพฤติกรรมแปลกประหลาด
-                                ห้องใต้หลังคาที่ล็อกจากด้านนอก
-                                และคำเตือนจากคนรอบตัว
-                            </p>
-
-                            <div class="border-top border-secondary my-4"></div>
-
-                            <p class="fs-5 fw-semibold textb">
-                                เธอเริ่มสงสัยว่า
-                                <span class="text-warning fw-bold">
-                                    ครอบครัวนี้กำลังซ่อนอะไรบางอย่างอยู่
-                                </span>
-                            </p>
-
-                            <p class="text-white  fs-5 mb-0">
-                                และในขณะเดียวกัน
-                                ครอบครัววินเชสเตอร์เองก็ยังไม่รู้ว่า
-                                มิลลีมีความลับอะไรซ่อนอยู่เช่นกัน
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- =====================================
-                         CLUES
-                         ===================================== -->
-                    <div class="row g-4 mt-4">
-
-                        <!-- Clue 1 -->
-                        <div class="col-md-4">
-
-                            <div class="card bg-black border-primary h-100">
-
-                                <div class="card-body p-4">
-
-                                    <span class="badge bg-primary mb-3">
-                                        CLUE 01
-                                    </span>
-
-                                    <h4 class="fw-bold text-warning">
-                                        เจ้านายที่แปลกประหลาด
-                                    </h4>
-
-                                    <p class="text-white  mb-0">
-                                        พฤติกรรมของคนในบ้านเริ่มทำให้
-                                        มิลลีสงสัยว่ามีบางอย่างไม่ปกติ
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Clue 2 -->
-                        <div class="col-md-4">
-
-                            <div class="card bg-black border-primary h-100">
-
-                                <div class="card-body p-4">
-
-                                    <span class="badge bg-primary mb-3">
-                                        CLUE 02
-                                    </span>
-
-                                    <h4 class="fw-bold text-warning">
-                                        ห้องใต้หลังคา
-                                    </h4>
-
-                                    <p class="text-secondary  text-white mb-0">
-                                        ห้องที่ถูกล็อกจากด้านนอก
-                                        กลายเป็นหนึ่งในสิ่งที่ทำให้
-                                        เธอต้องเริ่มค้นหาความจริง
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Clue 3 -->
-                        <div class="col-md-4">
-
-                            <div class="card bg-black border-primary h-100">
-
-                                <div class="card-body p-4">
-
-                                    <span class="badge bg-primary  mb-3">
-                                        CLUE 03
-                                    </span>
-
-                                    <h4 class="fw-bold text-warning">
-                                        ความลับของมิลลี
-                                    </h4>
-
-                                    <p class="text-secondary text-white mb-0">
-                                        ครอบครัววินเชสเตอร์เองก็ยังไม่รู้ว่า
-                                        มิลลีมีความลับอะไรซ่อนอยู่
-                                    </p>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
+        <!-- READER GUIDE / AEO: DIRECT ANSWERS TO FOUR QUESTIONS -->
+        <section id="reader-guide" class="py-5 bg-dark section-space">
+            <div class="container case-container py-lg-4">
+                <div class="section-intro text-center mb-5">
+                    <span class="badge bg-primary px-3 py-2 mb-3">READER'S GUIDE</span>
+                    <h2 class="display-5 section-heading fw-bold">คู่มือผู้อ่าน <span class="text-warning">The
+                            Housemaid</span></h2>
+                    <p class="text-muted-light fs-5 mt-3 mb-0">
+                        รวมคำตอบสำหรับคนที่กำลังตัดสินใจว่าจะอ่านเฮาส์เมดดีหรือไม่</p>
                 </div>
 
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4 p-lg-4">
+                                <div class="d-flex align-items-start gap-3 mb-3">
+                                    <span class="faq-number">01</span>
+                                    <h3 class="textb h4 fw-bold mb-0">The Housemaid เป็นหนังสือเกี่ยวกับอะไร</h3>
+                                </div>
+                                <p class="text-muted-light mb-0">
+                                    The Housemaid (เฮาส์เมด) เป็นนิยายระทึกขวัญของ Freida McFadden
+                                    เกี่ยวกับมิลลี หญิงสาวที่เข้าทำงานเป็นแม่บ้านให้ครอบครัววินเชสเตอร์ในคฤหาสน์หรู
+                                    แต่เมื่อพบพฤติกรรมผิดปกติและเหตุการณ์น่าสงสัย
+                                    เธอจึงเริ่มค้นหาความจริงที่ซ่อนอยู่ในบ้านหลังนี้
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4 p-lg-4">
+                                <div class="d-flex align-items-start gap-3 mb-3">
+                                    <span class="faq-number">02</span>
+                                    <h3 class="textb h4 fw-bold mb-0">The Housemaid เหมาะกับใคร</h3>
+                                </div>
+                                <p class="text-muted-light mb-0">
+                                    เหมาะกับผู้อ่านที่ชอบนิยายลึกลับ นิยายระทึกขวัญ ปริศนาที่ค่อย ๆ เปิดเผย
+                                    และเรื่องราวที่ทำให้ต้องคาดเดาว่าอะไรคือความจริง
+                                    โดยเฉพาะคนที่ชอบสังเกตพฤติกรรมของตัวละคร
+                                    และตามหาเบาะแสระหว่างอ่าน
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4 p-lg-4">
+                                <div class="d-flex align-items-start gap-3 mb-3">
+                                    <span class="faq-number">03</span>
+                                    <h3 class="textb h4 fw-bold mb-0">ต้องมีพื้นฐานก่อนอ่านหรือไม่</h3>
+                                </div>
+                                <p class="text-muted-light mb-0">
+                                    ไม่จำเป็นต้องมีพื้นฐานด้านวรรณกรรมหรือจิตวิทยามาก่อน
+                                    ผู้อ่านสามารถติดตามเรื่องได้จากเหตุการณ์ในเนื้อหา
+                                    เพียงใส่ใจรายละเอียดและพฤติกรรมของตัวละคร
+                                    ก็จะช่วยให้สนุกกับการคาดเดาและติดตามปริศนาได้มากขึ้น
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6">
+                        <article class="card case-card rounded-4">
+                            <div class="card-body p-4 p-lg-4">
+                                <div class="d-flex align-items-start gap-3 mb-3">
+                                    <span class="faq-number">04</span>
+                                    <h3 class="textb h4 fw-bold mb-0">ผู้อ่านจะได้ประโยชน์อะไรจากหนังสือเล่มนี้</h3>
+                                </div>
+                                <p class="text-muted-light mb-3">
+                                    นอกจากความเพลิดเพลินและความตื่นเต้น ผู้อ่านยังมีโอกาสฝึกสังเกตเบาะแส
+                                    ตั้งคำถามกับข้อมูลที่ได้รับ คาดเดาเหตุการณ์
+                                    และพิจารณาพฤติกรรมของตัวละครจากหลายมุมมอง
+                                </p>
+                                <a href="#benefits"
+                                    class="link-warning fw-semibold text-decoration-none">ดูประโยชน์จากการอ่านเพิ่มเติม
+                                    <span aria-hidden="true">→</span></a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
+        </section>
 
-        </div>
+        <!-- CASE FILE 03: BENEFITS -->
+        <section id="benefits" class="py-5 bg-dark section-space">
+            <div class="container case-container py-lg-4">
+                <div class="section-intro text-center mb-5">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-3">CASE FILE 03</span>
+                    <h2 class="textb display-5 section-heading fw-bold">สิ่งที่คุณจะได้จากการอ่าน</h2>
+                    <p class="text-muted-light fs-5 mt-3 mb-0">มากกว่าความสนุก คือการได้ฝึกคิดไปพร้อมกับเรื่องราว</p>
+                </div>
 
-    </section>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card case-card rounded-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <img src="images/think.png" alt="ภาพประกอบการฝึกคิดวิเคราะห์"
+                                    class="benefit-img d-block mx-auto mb-4">
+                                <div class="display-5 text-warning fw-bold">01</div>
+                                <h3 class="textb h4 fw-bold mt-3">ฝึกการคิดวิเคราะห์</h3>
+                                <p class="text-muted-light mb-0">ติดตามเบาะแสและพฤติกรรมของตัวละคร
+                                    เพื่อทำความเข้าใจเหตุการณ์และความจริงที่ซ่อนอยู่ในเรื่อง</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card case-card rounded-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <img src="images/question.png" alt="ภาพประกอบการตั้งคำถาม"
+                                    class="benefit-img d-block mx-auto mb-4">
+                                <div class="display-5 text-warning fw-bold">02</div>
+                                <h3 class="textb h4 fw-bold mt-3">ฝึกการตั้งคำถาม</h3>
+                                <p class="text-muted-light mb-0">ชวนให้สงสัยว่าสิ่งที่ตัวละครพูดเป็นความจริงหรือไม่
+                                    และยังมีข้อมูลอะไรที่ไม่ถูกเปิดเผย</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="card case-card rounded-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <img src="images/read.png" alt="ภาพประกอบการอ่านอย่างมีวิจารณญาณ"
+                                    class="benefit-img d-block mx-auto mb-4">
+                                <div class="display-5 text-warning fw-bold">03</div>
+                                <h3 class="textb h4 fw-bold mt-3">อ่านอย่างมีวิจารณญาณ</h3>
+                                <p class="text-muted-light mb-0">พิจารณาข้อมูลจากหลายมุมมอง
+                                    แทนการด่วนตัดสินจากสิ่งที่เห็นเพียงด้านเดียว</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <article class="card case-card rounded-4 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <img src="images/view.png" alt="ภาพประกอบการเปิดมุมมองต่อพฤติกรรมมนุษย์"
+                                    class="benefit-img d-block mx-auto mb-4">
+                                <div class="display-5 text-warning fw-bold">04</div>
+                                <h3 class="textb h4 fw-bold mt-3">เปิดมุมมองต่อพฤติกรรมมนุษย์</h3>
+                                <p class="text-muted-light mb-0">
+                                    สำรวจแรงจูงใจและเหตุผลเบื้องหลังการกระทำของตัวละครแต่ละคน</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <article class="card case-card rounded-4 shadow-sm">
+                            <div class="card-body p-4 p-lg-5">
+                                <img src="images/lovereading.png" alt="ภาพประกอบการสร้างนิสัยรักการอ่าน"
+                                    class="benefit-img d-block mx-auto mb-4">
+                                <div class="display-5 text-warning fw-bold">05</div>
+                                <h3 class="textb h4 fw-bold mt-3">สร้างนิสัยรักการอ่าน</h3>
+                                <p class="text-muted-light mb-0">
+                                    เพลิดเพลินกับเรื่องราวที่ชวนติดตามและกระตุ้นให้อยากรู้ว่าจะเกิดอะไรขึ้นต่อไป</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-    <!-- ==================================================
-         WHY READ
-         ================================================== -->
-    <section id="why-read" class="py-5 bg-black">
-
-        <div class="container py-5">
-
-            <div class="row align-items-center g-5">
-
-                <div class="col-lg-5">
-
-                    <span class="badge bg-warning text-dark px-3 py-2 mb-3">
-                        CASE FILE 02
-                    </span>
-
-                    <h2 class="display-4 fw-bold">
-                        ทำไมจึงควร
-                        <span class="text-warning">
-                            อ่าน?
-                        </span>
+        <!-- FINAL VALUE -->
+        <section id="value" class="py-5 bg-black section-space">
+            <div class="container case-container py-lg-4">
+                <div class="section-intro text-center">
+                    <span class="badge bg-warning text-dark px-3 py-2 mb-4">FINAL NOTE</span>
+                    <h2 class="display-5 section-heading fw-bold mb-4">
+                        The Housemaid (เฮาส์เมด):
                     </h2>
-
-                </div>
-
-
-                <div class="col-lg-7">
-
-                    <p class="fs-4">
-                        <strong class="text-warning">
-                            The Housemaid
-                        </strong>
-                        เป็นนิยายที่เหมาะสำหรับคนที่ชอบเรื่องราว
-                        ลึกลับ ชวนสงสัย
-                        และต้องการหนังสือที่อ่านแล้วอยากรู้ว่า
-                        <span class="text-primary fw-bold">
-                            “เกิดอะไรขึ้นต่อไป”
-                        </span>
-                    </p>
-
-                    <p class="text-secondary fs-5">
-                        จุดเด่นของเรื่องคือการสร้างบรรยากาศ
-                        ที่ทำให้ผู้อ่านตั้งคำถามกับตัวละครอยู่ตลอดเวลา
-                        สิ่งที่เห็นอาจไม่ใช่สิ่งที่เป็นจริง
-                        และตัวละครแต่ละคนต่างก็มีบางอย่าง
-                        ที่ไม่เปิดเผยออกมา
-                    </p>
-
-                    <div class="border-start border-warning border-4 ps-4 mt-4">
-
-                        <p class="fs-5 mb-0">
-                            หนังสือเล่มนี้จะทำให้คุณต้องคอยถามตัวเองว่า
-                            <span class="text-warning">
-                                “ใครกำลังพูดความจริง?”
-                            </span>
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         BENEFITS
-         ================================================== -->
-    <section id="benefits" class="py-5 bg-dark">
-
-        <div class="container py-5">
-
-            <!-- Section Title -->
-            <div class="text-center mb-5">
-
-                <span class="badge bg-warning text-dark px-3 py-2 mb-3">
-                    CASE FILE 03
-                </span>
-
-                <h2 class="display-5 fw-bold text-white">
-                    สิ่งที่คุณจะได้จากการอ่าน
-                </h2>
-
-                <p class="text-white-50 fs-5">
-                    มากกว่าความสนุก
-                    คือการได้ฝึกคิดไปพร้อมกับเรื่องราว
-                </p>
-
-            </div>
-
-
-            <!-- Benefits -->
-            <div class="row g-4">
-
-
-                <!-- =========================
-                 01
-                 ========================= -->
-                <div class="col-md-6 col-lg-4">
-
-                    <div class="card bg-black border-primary h-100 shadow">
-
-                        <div class="card-body p-4">
-
-                            <!-- Image -->
-                            <img src="images/think.png" alt="ฝึกการคิดวิเคราะห์"
-                                class="img-fluid w-50 d-block mx-auto mb-4">
-
-                            <!-- Number -->
-                            <div class="display-5 text-warning fw-bold fontbf">
-                                01
-                            </div>
-
-                            <!-- Title -->
-                            <h4 class="fw-bold text-white mt-3">
-                                ฝึกการคิดวิเคราะห์
-                            </h4>
-
-                            <!-- Description -->
-                            <p class="text-white-50 mb-0">
-                                ผู้อ่านต้องสังเกตข้อมูลและพฤติกรรม
-                                ของตัวละครเพื่อทำความเข้าใจ
-                                ความจริงที่ซ่อนอยู่
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                 02
-                 ========================= -->
-                <div class="col-md-6 col-lg-4">
-
-                    <div class="card bg-black border-primary h-100 shadow">
-
-                        <div class="card-body p-4">
-
-                            <!-- Image -->
-                            <img src="images/question.png" alt="ฝึกการตั้งคำถาม"
-                                class="img-fluid w-50 d-block mx-auto mb-4">
-
-                            <!-- Number -->
-                            <div class="display-5 text-warning fw-bold fontbf">
-                                02
-                            </div>
-
-                            <!-- Title -->
-                            <h4 class="fw-bold text-white mt-3">
-                                ฝึกการตั้งคำถาม
-                            </h4>
-
-                            <!-- Description -->
-                            <p class="text-white-50 mb-0">
-                                เรื่องราวกระตุ้นให้ตั้งข้อสงสัยว่า
-                                ใครกำลังพูดความจริง
-                                และใครกำลังปกปิดบางอย่าง
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                 03
-                 ========================= -->
-                <div class="col-md-6 col-lg-4">
-
-                    <div class="card bg-black border-primary h-100 shadow">
-
-                        <div class="card-body p-4">
-
-                            <!-- Image -->
-                            <img src="images/read.png" alt="อ่านอย่างมีวิจารณญาณ"
-                                class="img-fluid w-50 d-block mx-auto mb-4">
-
-                            <!-- Number -->
-                            <div class="display-5 text-warning fw-bold fontbf">
-                                03
-                            </div>
-
-                            <!-- Title -->
-                            <h4 class="fw-bold text-white mt-3">
-                                อ่านอย่างมีวิจารณญาณ
-                            </h4>
-
-                            <!-- Description -->
-                            <p class="text-white-50 mb-0">
-                                ช่วยให้ผู้อ่านไม่ด่วนเชื่อสิ่งที่เห็น
-                                หรือได้ยิน แต่พิจารณาข้อมูล
-                                จากหลายมุมมอง
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                 04
-                 ========================= -->
-                <div class=" col-md-6 col-lg-6">
-
-                    <div class="card bg-black border-primary h-100 shadow">
-
-                        <div class="card-body p-4">
-
-                            <!-- Image -->
-                            <img src="images/view.png" alt="เปิดมุมมองต่อพฤติกรรมมนุษย์"
-                                class="img-fluid order  d-block mx-auto mb-4 " width="144px">
-
-                            <!-- Number -->
-                            <div class="display-5 text-warning fw-bold fontbf">
-                                04
-                            </div>
-
-                            <!-- Title -->
-                            <h4 class="fw-bold text-white mt-3">
-                                เปิดมุมมองต่อพฤติกรรมมนุษย์
-                            </h4>
-
-                            <!-- Description -->
-                            <p class="text-white-50 mb-0">
-                                ทำให้เห็นว่าคนแต่ละคนอาจมีเหตุผล
-                                แรงจูงใจ และความลับที่แตกต่างกัน
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- =========================
-                 05
-                 ========================= -->
-                <div class="col-md-6 col-lg-6">
-
-                    <div class="card bg-black border-primary h-100 shadow">
-
-                        <div class="card-body p-4">
-
-                            <!-- Image -->
-                            <img src="images/lovereading.png" alt="สร้างนิสัยรักการอ่าน"
-                                class="img-fluid  d-block mx-auto mb-4" width="144px">
-
-                            <!-- Number -->
-                            <div class="display-5 text-warning fw-bold fontbf">
-                                05
-                            </div>
-
-                            <!-- Title -->
-                            <h4 class="fw-bold text-white mt-3">
-                                สร้างนิสัยรักการอ่าน
-                            </h4>
-
-                            <!-- Description -->
-                            <p class="text-white-50 mb-0">
-                                ด้วยเนื้อเรื่องแนวทริลเลอร์ที่ชวนติดตาม
-                                หนังสือสามารถทำให้การอ่านนอกเวลา
-                                ไม่น่าเบื่อ
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==================================================
-         FINAL VALUE
-         ================================================== -->
-    <section id="value" class="py-5 bg-black">
-
-        <div class="container py-5">
-
-            <div class="row justify-content-center">
-
-                <div class="col-lg-9 text-center">
-
-                    <span class="badge bg-warning text-dark px-3 py-2 mb-4">
-                        FINAL NOTE
-                    </span>
-
-                    <h2 class="display-5 fw-bold mb-4">
+                    <h2 class="display-5 section-heading fw-bold mb-4">
                         สิ่งที่ซ่อนอยู่
-                        <span class="text-primary">
-                            มากกว่าความลับ
-                        </span>
+                        <span class="text-warning">มากกว่าความลับ</span>
                     </h2>
 
-                    <p class="fs-4 text-secondary">
-                        The Housemaid ไม่ได้ให้เพียงความสนุกและความตื่นเต้น
-                        แต่ยังชวนให้ผู้อ่านมองสิ่งต่าง ๆ
-                        อย่างรอบคอบมากขึ้น
+
+                    <p class="fs-4 text-muted-light ">
+                        The Housemaid ไม่ได้มีเพียงเรื่องราวลึกลับและความระทึกขวัญ
+                        แต่ยังชวนให้ผู้อ่านตั้งคำถามกับสิ่งที่เห็น และมองให้ลึกลงไปกว่าภาพลักษณ์ภายนอก
                     </p>
+                </div>
 
+                <div class="case-quote border border-primary border-3 rounded-4 p-4 p-lg-5 mt-5 text-center">
+                    <p class="h2 fw-semibold mb-0">“บางครั้ง สิ่งที่น่ากลัวที่สุดอาจไม่ใช่ความลับที่เราค้นพบ
+                        แต่คือความจริงที่เราไม่เคยคาดคิดมาก่อน”</p>
+                </div>
 
-                    <!-- Quote -->
-                    <div class="border border-warning border-3
-                                rounded-4 p-4 p-lg-5 mt-5">
+                <!-- Final Note Description -->
+                <div class="row justify-content-center mt-4">
+                    <div class="col-12 col-lg-9 col-xl-8 final-note-copy">
 
-                        <p class="display-6 fw-semibold mb-0">
-                            “บางครั้ง สิ่งที่น่ากลัวที่สุด
-                            อาจไม่ใช่ความลับที่เราค้นพบ
-                            แต่คือความจริงที่เราไม่เคยคาดคิดมาก่อน”
+                        <p class="text-muted-light fs-5 mt-4">
+                            เรื่องราวของมิลลีและครอบครัววินเชสเตอร์สะท้อนให้เห็นว่า
+                            ภาพลักษณ์ที่ดูสมบูรณ์แบบอาจไม่ได้บอกความจริงทั้งหมด
+                            สิ่งที่เห็นหรือได้ยินจึงไม่ใช่คำตอบเสมอไป
+                            และการทำความเข้าใจใครสักคนอาจต้องมองให้ลึกกว่าสิ่งที่ปรากฏอยู่ตรงหน้า
+                        </p>
+
+                        <p class="fs-5 mt-4">
+                            สำหรับคนที่ชื่นชอบ
+                            <span class="text-warning fw-bold">นิยายระทึกขวัญ</span>
+                            The Housemaid เป็นอีกหนึ่งเรื่องที่ชวนให้ติดตาม
+                            ทั้งปริศนาที่ค่อย ๆ เปิดเผย
+                            และพฤติกรรมของตัวละครที่ทำให้เราต้องคิดตาม
+                            พร้อมเปิดโอกาสให้ผู้อ่านได้
+                            <span class="text-primary fw-bold">ฝึกสังเกตและคิดวิเคราะห์</span>
+                            ผ่านเรื่องราวที่เต็มไปด้วยความลับ
                         </p>
 
                     </div>
-
-
-                    <p class="text-secondary fs-5 mt-5">
-                        เรื่องราวทำให้เราเห็นว่าภาพลักษณ์ภายนอก
-                        ไม่ได้สะท้อนความจริงทั้งหมด
-                        และการตัดสินคนจากสิ่งที่มองเห็นเพียงด้านเดียว
-                        อาจทำให้เราเข้าใจผิดได้
-                    </p>
-
-                    <p class="fs-5 mt-4">
-                        หนังสือเล่มนี้จึงเป็นทั้ง
-                        <span class="text-warning fw-bold">
-                            ความบันเทิง
-                        </span>
-                        และพื้นที่สำหรับ
-                        <span class="text-primary fw-bold">
-                            ฝึกทักษะการคิดอย่างมีเหตุผล
-                        </span>
-                    </p>
-
                 </div>
 
+                <div class="text-center mt-5">
+                    <a href="https://www.naiin.com/product/detail/619675" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-outline-warning btn-lg rounded-pill px-4">ดูรายละเอียดหนังสือ</a>
+                </div>
             </div>
+        </section>
 
-        </div>
+    </main>
 
-    </section>
-
-
-    <!-- ==================================================
-         FOOTER
-         ================================================== -->
+    <!-- FOOTER -->
     <footer class="bg-dark border-top border-primary py-4">
-
-        <div class="container">
-
-            <div class="row align-items-center">
-
-                <!-- ชื่อหนังสือ -->
-                <div class="col-12 col-md-6 text-center text-md-start mb-3 mb-md-0">
-
-                    <h5 class="fw-bold text-warning mb-1">
-                        THE HOUSEMAID
-                    </h5>
-
-                    <p class="text-white mb-0">
-                        เฮาส์เมด
-                    </p>
-
+        <div class="container case-container">
+            <div class="row align-items-center g-3">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <h2 class="h5 fw-bold text-warning mb-1">THE HOUSEMAID</h2>
+                    <p class="text-white mb-0">เฮาส์เมด</p>
                 </div>
-
-
-                <!-- Badge -->
                 <div class="col-12 col-md-6 text-center text-md-end">
-
-                    <a href="https://www.naiin.com/product/detail/643683?srsltid=AU7gw4UHl0Q7Y6F_64saizjSQ7QCLzmy6vostEicokPTo3J-UW1S858p"
+                    <a href="https://www.naiin.com/product/detail/643683" target="_blank" rel="noopener noreferrer"
                         class="text-decoration-none">
-                        <span class="badge bg-primary px-3 py-2">
-                            CASE CLOSED ?
-                        </span>
+                        <span class="badge bg-primary px-3 py-2">CASE CLOSED ?</span>
                     </a>
                 </div>
-
             </div>
-
+            <div class="border-top border-secondary mt-4 pt-3">
+                <p class="text-white-50 small text-center mb-1">แหล่งอ้างอิงภาพประกอบ</p>
+                <p class="text-white-50 small text-center mb-0">
+                    ปกหนังสือ: <a href="https://www.naiin.com/product/detail/619675" target="_blank"
+                        rel="noopener noreferrer" class="link-light">Naiin.com</a>
+                    <span class="mx-2">|</span>
+                    ไอคอน: <a href="https://www.flaticon.com/" target="_blank" rel="noopener noreferrer"
+                        class="link-light">Flaticon</a>
+                </p>
+            </div>
         </div>
-
     </footer>
 
-      <!-- =========================
-             แหล่งอ้างอิง
-             ========================= -->
-        <div class="border-top border-secondary mt-4 pt-3">
-
-            <p class="text-white-50 small text-center mb-1">
-                แหล่งอ้างอิง
-            </p>
-
-            <p class="text-white-50 small text-center mb-0">
-
-                รูปภาพปกหนังสือ :
-                <a href="https://www.naiin.com/product/detail/619675"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="text-white-50">
-                    Naiin.com
-                </a>
-
-                &nbsp;|&nbsp;
-
-                ไอคอน :
-                <a href="https://www.flaticon.com/"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="text-white-50">
-                    Flaticon
-                </a>
-
-            </p>
-
-        </div>
-
-
-
-  <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+    <!-- Bootstrap JS and AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        if (window.AOS) {
+            AOS.init({ once: true, duration: 800, offset: 60 });
+        }
     </script>
 </body>
 

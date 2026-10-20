@@ -55,3 +55,70 @@ h4 {
 .textw{
     color: white;
 }
+
+/* ปรับขนาดหัวข้อหลักให้เหมาะกับหน้าจอ */
+.hero-title {
+    font-size: clamp(2rem, 3.8vw, 3.4rem);
+    line-height: 1.25;
+    overflow-wrap: normal;
+}
+
+/* ใหัชื่อหนังสือและชื่อภาษาไทยอยู่บรรทัดเดียวกัน */
+.book-title-line {
+    white-space: nowrap;
+    letter-spacing: -0.025em;
+}
+
+/* บนมือถือ อนุญาตให้ขึ้นบรรทัดใหม่ได้หากพื้นที่ไม่พอ */
+@media (max-width: 575.98px) {
+    .book-title-line {
+        white-space: normal;
+    }
+}
+
+/* หัวข้อเรื่องย่อ */
+.story-heading {
+    font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: normal;
+    text-wrap: balance;
+    margin-bottom: 1.5rem;
+}
+
+/* แยกหัวข้อหลักและหัวข้อรองให้จัดบรรทัดได้สวยงาม */
+.story-heading-main,
+.story-heading-sub {
+    display: block;
+}
+
+/* ปรับขนาดสำหรับมือถือ */
+@media (max-width: 575.98px) {
+    .story-heading {
+        font-size: clamp(1.45rem, 5.5vw, 2rem);
+        line-height: 1.45;
+    }
+}
+
+/* FINAL NOTE: จัดเนื้อหาให้อ่านง่ายและเป็นระเบียบ */
+.final-note-copy {
+    text-align: left;
+    line-height: 1.9;
+}
+
+/* เว้นระยะระหว่างย่อหน้าให้เนื้อหาไม่แน่นเกินไป */
+.final-note-copy p {
+    margin-bottom: 1.5rem;
+}
+
+/* ปรับการอ่านบนมือถือ */
+@media (max-width: 575.98px) {
+    .final-note-copy {
+        line-height: 1.8;
+    }
+
+    .final-note-copy p {
+        font-size: 1.05rem !important;
+        margin-top: 1.25rem !important;
+    }
+}
